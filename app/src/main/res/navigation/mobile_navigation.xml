@@ -20,6 +20,24 @@
     <fragment
         android:id="@+id/navigation_notifications"
         android:name="com.example.menuapplication.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
+        android:label=""
         tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/navigation_price"
+        android:name="com.example.menuapplication.ui.price.PriceFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_price" />
+
+    <fragment
+        android:id="@+id/navigation_table"
+        android:name="com.example.menuapplication.ui.table.TableFragment"
+        android:label="Выберите номер стола"
+        tools:layout="@layout/fragment_table" />
+
+    <fragment
+        android:id="@+id/priceDescription"
+        android:name="com.example.menuapplication.ui.price.PriceDescription"
+        android:label="fragment_price_description"
+        tools:layout="@layout/fragment_price_description" />
 </navigation>

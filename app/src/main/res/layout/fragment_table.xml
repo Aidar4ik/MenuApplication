@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.table.TableFragment">
+
+    <TextView
+        android:paddingTop="10dp"
+        android:textSize="25sp"
+        android:id="@+id/txt"
+        android:elevation="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:text="Виберите номер столa"
+        style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@id/txt"
+        tools:listitem="@layout/home_recycler_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recycler_table"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+</RelativeLayout>
