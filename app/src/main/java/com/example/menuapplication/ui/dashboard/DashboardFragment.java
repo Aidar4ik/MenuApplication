@@ -1,5 +1,6 @@
 package com.example.menuapplication.ui.dashboard;
 
+import android.app.AlertDialog;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -52,7 +53,16 @@ public class DashboardFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        AlertDialog.Builder builder=new AlertDialog.Builder(getContext());
         list.addAll(App.getDatabase().recieptDao().getAll());
+        if(list.size()>0) {
+            builder.setMessage("Ваш заказ будет готов через [" + list.size() * 5 + "] минут");
+        }
+        else{
+            builder.setMessage("Вы ничего не заказали");
+        }
+        AlertDialog alertDialog=builder.create();
+        alertDialog.show();
         recyclerView = view.findViewById(R.id.recieptRecycler);
         recyclerView.setAdapter(adapter);
         adapter.addList(list);

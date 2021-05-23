@@ -36,13 +36,9 @@ public class TableFragment extends Fragment {
     private TableAdapter adapter = new TableAdapter(new TableAdapter.onItemClickLiesten() {
         @Override
         public void clicker(int position) {
-            if(list.get(position).getText().equals("Не занято")){
-                db.collection("Tables").add(position).addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
-                    @Override
-                    public void onComplete(@NonNull @NotNull Task<DocumentReference> task) {
+            if(list.get(position).getText().equals("Занято")){
 
-                    }
-                });
+            }else {
                 getActivity().onBackPressed();
             }
         }

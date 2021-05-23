@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.price.PriceFragment">
+    tools:context=".ui.price.PriceFragment"
+    android:background="#5DE8FA">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/priceRecycler"

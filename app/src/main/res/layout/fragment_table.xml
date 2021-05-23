@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.table.TableFragment">
+    tools:context=".ui.table.TableFragment"
+    android:background="#5DE8FA">
 
     <TextView
         android:paddingTop="10dp"

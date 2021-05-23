@@ -34,10 +34,10 @@
         android:name="com.example.menuapplication.ui.table.TableFragment"
         android:label="Выберите номер стола"
         tools:layout="@layout/fragment_table" />
-
     <fragment
-        android:id="@+id/priceDescription"
-        android:name="com.example.menuapplication.ui.price.PriceDescription"
-        android:label="fragment_price_description"
-        tools:layout="@layout/fragment_price_description" />
+        android:id="@+id/navigation_likes"
+        android:name="com.example.menuapplication.ui.likes.LikesFragment"
+        android:label="fragment_likes"
+        tools:layout="@layout/fragment_likes" />
+
 </navigation>

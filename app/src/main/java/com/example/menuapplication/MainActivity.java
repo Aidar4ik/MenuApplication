@@ -1,5 +1,7 @@
 package com.example.menuapplication;
 
+import android.annotation.SuppressLint;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 
@@ -34,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         initNavView();
     }
 
+    @SuppressLint("ResourceAsColor")
     private void initNavView() {
         BottomNavigationView navView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
@@ -42,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
                 R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+//        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
 
         navController.navigate(R.id.navigation_table);
@@ -59,11 +62,11 @@ public class MainActivity extends AppCompatActivity {
 
             if(destination.getId()==R.id.navigation_table){
                 navView.setVisibility(View.GONE);
-                getSupportActionBar().hide();
+//                getSupportActionBar().hide();
             }
             else {
                 navView.setVisibility(View.VISIBLE);
-                getSupportActionBar().show();
+//                getSupportActionBar().show();
             }
         });
     }
